@@ -1,0 +1,627 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+@font-face {
+	font-family: 'fontenova';
+	src: url("fontes/Righteous-Regular.ttf");
+}
+
+body#corpo {
+	background: url("imagens/fundo.jpg");
+}
+
+header#cabecalho {
+	border-bottom: solid 2px gray;
+}
+
+article#conteudo {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+footer#rodape {
+	border-top: solid 2px gray;
+	text-align: center;
+}
+
+/*Imagens do Cabeçalho*/
+
+img.logo {
+	position: absolute;
+	top: 5px;
+	left: 3px;
+}
+
+img.icone {
+	position: absolute;
+	top: 70px;
+	right: 80px;
+}
+
+hgroup.titulos h1 {
+	font-family: 'fontenova';
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-size: 30pt;
+	letter-spacing: -20px;
+	width: 45%;
+	transition: all 2s;
+}
+
+hgroup.titulos h1:hover {
+	letter-spacing: 6px;
+	background-color: rgba(50, 61, 224, 1);
+	color: white;
+	box-shadow: 6px 6px 6px gray;
+	text-decoration: none;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+figure.imagens {
+	/*border: solid 3px rgb(0,0,0);*/
+	background-color: lightgray;
+	text-align: center;
+	box-shadow: 0px 0px 20px #000000;
+	border-radius: 80px;
+}
+
+span.texto {
+	text-align: justify;
+	font-size: 16pt;
+	/*font-family: chilanka;*/
+	font-family: 'Sedgwick Ave Display', c;
+	text-indent: 50px;
+}
+
+
+/*Formatação da primeira foto do article*/
+
+figure.foto {
+	border: solid 8px black;
+	box-shadow: 6px 6px 6px gray;
+	text-align: center;
+	background-color: lightblue;
+	width: 25%;
+	padding-top: 5px;
+	border-radius: 10px;
+	float: right;
+}
+
+figure.foto img {
+	border: solid 3px green;
+	width: 85%;
+	height: 150px;
+	transition: all 2s;
+}
+
+figure.foto img:hover {
+	transform: rotatez(45deg);
+}
+
+figure.foto h4 {
+	margin-top: -4px;
+	margin-bottom: 0px;
+	background-color: yellow;
+}
+
+/*Formatação do menu principal*/
+
+nav.menu h3 {
+	display: none;
+}
+
+nav.menu ol {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0px;
+	right: 60px;
+}
+
+nav.menu li {
+	display: inline-block;
+	background-color: lightgray;
+	padding: 10px;
+	margin: 3px;
+	border-radius: 10px;
+	transition: background-color 2s, transform 1s;
+}
+
+nav.menu li:hover {
+	background-color: darkgray;
+	transform: rotatez(-25deg);
+}
+
+nav.menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav.menu a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+/*Formatação dos títulos do article*/
+
+article#conteudo h1 {
+	background-color: #808080;
+	text-shadow: 2px 2px 2px #ffff00;
+	font-size: 25pt;
+	text-align: center;
+	transition: all 1s;
+}
+
+article#conteudo h1:hover {
+	letter-spacing: 30px;
+}
+
+/*Formatação da tabela*/
+
+table.produto {
+	background-color: white;
+	border: 1px solid green;
+	border-spacing: 1px;
+	float: left;
+}
+
+table.produto caption {
+	background-color: gray;
+	font-size: 15pt;
+}
+
+table.produto th {
+	border: 1px solid black;
+}
+
+table.produto td {
+	border: 1px solid red;
+	text-align: center;
+	padding: 10px;
+	transition: border-radius 2s;
+}
+
+table.produto td:hover {
+	background-color: black;
+	color: white;
+	border-radius: 25px;
+}
+
+table.produto figure.hard {
+	margin: 0px;
+}
+
+/*Vídeos Produtos*/
+
+iframe.video {
+	margin-left: 150px;
+}
+
+iframe.video-2 {
+	margin-left: 615px;
+}
+
+/* SERVIÇOS */
+/* Contêiner principal que agrupa os vídeos */
+.container-videos {
+	display: flex;
+	/* Alinha os vídeos lado a lado na horizontal (inline, table etc) */
+	gap: 20px;
+	/* Cria um espaço de 20px entre um vídeo e outro (Se tirar os vídeos vão ficar grudados pessoal)*/
+}
+
+/* Bloco individual de cada vídeo com seu título */
+.card-video {
+	flex: auto;
+	/* Faz todos os cards dividirem a tela em tamanhos iguais */
+	color: #2ab260;
+	/* Define a cor do texto do título */
+	text-align: center;
+	/* Centraliza o título acima do vídeo */
+}
+
+/* O player do YouTube (janelinha do vídeo gurizada) */
+.card-video iframe {
+	width: 100%;
+	/* Faz o vídeo ocupar toda a largura do seu card */
+	aspect-ratio: 16 / 9;
+	/* Mantém a proporção de vídeo padrão sem distorcer */
+	border-radius: 30px;
+	/* Arredonda os cantos da caixa do vídeo */
+	border: solid;
+	border-width: 5px;
+}
+
+
+/* LOCALIZAÇÃO */
+
+/* Centralização e fonte maior */
+.centralizado {
+	max-width: 100%;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 20px;
+}
+
+/* Tabela */
+.tabela {
+	width: 100%;
+}
+
+.tabela th,
+.tabela td {
+	border: 1px solid #31942f;
+	padding: 10px;
+	background-color: #eb71b6;
+}
+
+/* FAQ */
+.faq {
+	background: #5ca9cd;
+	padding: 10px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+
+
+
+
+/*SOBRE - Minha versão*/
+/*Fotos da gurizada*/
+
+/* Container da galeria das fotinhas*/
+ul.album {
+	max-width: 100%;
+	margin: auto;
+	padding: 50px;
+	list-style: none; /*Tirar o marcador*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+}
+
+/* Card básico */
+ul.album li {
+	width: 200px;
+	height: 300px;
+	border: 5px solid white;
+	font-family: Arial;
+	text-align: center;
+	background: var(--img) center / cover no-repeat; /* Img como variável, já viram isso? */
+	transition: all 1.5s ease;
+	position: relative;
+}
+
+/* Efeito ao passar o mouse */
+ul.album li:hover {
+	background-image: var(--img-hover, var(--img)); /* Coloca na frente a outra img */
+	transform: scale(1.3); /* Crescer a img */
+	border-radius: 40px;
+	z-index: 10; /* Colocar na frente conforme o valor for maior */
+}
+
+/* Legenda com o nome */
+ul.album li span {
+	opacity: 0; 
+	color: white;
+	text-shadow: 1px 1px 1px black; /* Sombreado texto (local e borrado) */
+	background-color: rgba(0, 0, 0, 0.2);
+	font-size: 8pt;
+	padding: 10px;
+	border-radius: 35px;
+	transition: opacity 1.3s;
+
+	/* Centralização vertical e horizontal do texto */
+	display: flex;
+	align-items: end; /* nome final do container da img */
+	justify-content: center;
+	height: 100%;
+	box-sizing: border-box; /* bordas internas pro nome n sair pra fora */
+}
+
+ul.album li:hover span {
+	opacity: 1; /* nome ficar visível após passar mouse */
+}
+
+
+
+
+
+
+
+
+
+/*EXEMPLO ANTERIOR DO SOBRE*/
+/*ul.album {
+	width: 920px;
+	margin: auto;
+	padding: 50px;
+	list-style: none;
+	overflow: hidden;
+}
+
+ul.album li {
+	width: 200px;
+	height: 267px;
+	border: solid white 5px;
+	margin: 10px;
+	font-family: arial;
+	text-align: center;
+	float: left;
+}
+
+ul.album li.foto1 {
+	background: url('imagens/equipe/cleber1.jpeg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto1:hover {
+	background: url('imagens/equipe/cleber2.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto2 {
+	background: url('imagens/equipe/joojão1.jpeg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto2:hover {
+	background: url('imagens/equipe/Joojão2.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto3 {
+	background: url('imagens/equipe/') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto3:hover {
+	background: url('imagens/equipe/') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto4 {
+	background: url('imagens/equipe/léo1.png') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto4:hover {
+	background: url('imagens/equipe/léo2.png') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto5 {
+	background: url('imagens/equipe/leo ferraz1.jpeg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto5:hover {
+	background: url('imagens/equipe/leo ferraz2.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto6 {
+	background: url('imagens/equipe/leo passere1.jpeg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto6:hover {
+	background: url('imagens/equipe/leo passere2.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto7 {
+	background: url('imagens/equipe/') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto7:hover {
+	background: url('imagens/equipe/') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto8 {
+	background: url('imagens/equipe/luis gustavo1.jpg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto8:hover {
+	background: url('imagens/equipe/luis gustavo2.jpg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto9 {
+	background: url('imagens/equipe/luizFernando1.jpg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto9:hover {
+	background: url('imagens/equipe/luizFernando2.jpg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto10 {
+	background: url('imagens/equipe/') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto10:hover {
+	background: url('imagens/equipe/') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto11 {
+	background: url('imagens/equipe/mateus1.jpeg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto11:hover {
+	background: url('imagens/equipe/mateus2.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto12 {
+	background: url('imagens/equipe/nayane1.jpg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto12:hover {
+	background: url('imagens/equipe/nayane2.jpg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto13 {
+	background: url('imagens/equipe/pietro1.jpg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto13:hover {
+	background: url('imagens/equipe/pietro2.jpg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto14 {
+	background: url('imagens/equipe/') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto14:hover {
+	background: url('imagens/equipe/') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto15 {
+	background: url('imagens/equipe/ruanbauer1.png') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto15:hover {
+	background: url('imagens/equipe/ruanbauer2.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto16 {
+	background: url('imagens/equipe/ruanBorges2.jpeg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto16:hover {
+	background: url('imagens/equipe/ruanBorges1.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto17 {
+	background: url('imagens/equipe/') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto17:hover {
+	background: url('imagens/equipe/') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto18 {
+	background: url('imagens/equipe/ thaila.jpg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto18:hover {
+	background: url('imagens/equipe/ thaila2.jpg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto19 {
+	background: url('imagens/equipe/vini1.png') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto19:hover {
+	background: url('imagens/equipe/vini2.png') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto20 {
+	background: url('imagens/equipe/Yago1.jpeg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto20:hover {
+	background: url('imagens/equipe/Yago2.jpeg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+ul.album li.foto21 {
+	background: url('imagens/equipe/yasmin1.jpg') no-repeat;
+	transition: all 0.5s;
+}
+
+ul.album li.foto21:hover {
+	background: url('imagens/equipe/yasmin2.jpg') no-repeat;
+	transform: scale(1.3);
+	border-radius: 40px;
+}
+
+
+ul.album li span {
+	opacity: 0;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	background-color: rgba(0, 0, 0, 0.4);
+	font-size: 8pt;
+	line-height: 520px;
+	padding: 5px;
+	border-radius: 40px;
+}
+
+ul.album li:hover span {
+	opacity: 1;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Formulário*/
+
+form.contato {
+	width: 50%;
+	background-color: white;
+	margin: auto;
+}
+
+fieldset.sexo {
+	width: 25%;
+}
